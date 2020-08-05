@@ -40,7 +40,10 @@ class MainActivity : AppCompatActivity() {
 
    private fun initRecyclerView(){
        binding.subscriberRecyclerView.layoutManager = LinearLayoutManager(this)
-       adapter = MyRecyclerViewAdapter({ selectedItem: Subscriber -> listItemClicked(selectedItem) })
+       adapter =
+           MyRecyclerViewAdapter({ selectedItem: Subscriber ->
+               listItemClicked(selectedItem)
+           })
        binding.subscriberRecyclerView.adapter = adapter
        displaySubscribersList()
    }
